@@ -111,3 +111,7 @@ Task IDs from the API are not unique, which may cause issues when editing or del
 The app uses the JSONPlaceholder API for demo purposes.
 Thanks to React Toastify for the notification library.
 
+![Screenshot_20241113_193341](https://github.com/user-attachments/assets/b90ca685-26fe-4afd-907b-fa9c5079766e)
+
+
+
