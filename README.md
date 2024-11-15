@@ -1,70 +1,113 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+📝 Task List Application
+This is a React-based Task List Application that allows users to manage their tasks effectively. The app supports adding, editing, and deleting tasks, along with features like task filtering, marking tasks as complete, and more. The UI is enhanced with animations and notifications using react-toastify.
 
-### `npm start`
+🌟 Features
+Add Task: Add new tasks with a title.
+Edit Task: Update an existing task's title.
+Delete Task: Remove tasks from the list.
+Complete All: Mark all tasks as completed with a single click.
+Delete Completed Tasks: Clear all tasks that are marked as completed.
+Task Filtering: Filter tasks based on their status (All, Completed, Incompleted).
+Persistent Storage: Fetch initial tasks from an API and manage the task state locally.
+Notifications: Display success and error messages using react-toastify.
+Loading State: Show a loading message while fetching tasks from the API.
+Responsive Design: User-friendly interface with responsive design.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+🛠️ Tech Stack
+Framework: React
+Language: JavaScript
+Styling: CSS
+Libraries:
+react-toastify for notifications
+Fetch API for data handling
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+📂 Project Structure
+ code
+src/
+├── components/
+│   └── TaskList.js
+├── image/
+│   └── task.png
+├── style.css
+├── App.js
+└── index.js
 
-### `npm test`
+🚀 Installation
+Follow these steps to get the project running locally:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Clone the repository:
 
-### `npm run build`
+bash
+cd tasklist-app
+Install dependencies:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+bash
+Copy code
+npm install
+Start the development server:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+bash
+Copy code
+npm start
+Open the application in your browser at:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+Copy code
+http://localhost:3000
+🖼️ Preview
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+📦 API Integration
+The app fetches initial tasks from the JSONPlaceholder API. It also uses the API for adding and updating tasks.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Fetch Todos: Retrieves a list of tasks from the API on initial load.
+Add Task: Sends a POST request to add a new task.
+Edit Task: Sends a PUT request to update an existing task.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+🔍 How to Use
+Add a Task: Type a task title in the input box and click "Add".
+Edit a Task: Click the edit icon next to a task, update the title, and click "Update".
+Delete a Task: Click the delete icon next to a task.
+Complete a Task: Check the checkbox next to a task title.
+Filter Tasks: Use the filter options to view all, completed, or incompleted tasks.
+Complete All Tasks: Click "Complete all tasks" to mark all tasks as completed.
+Delete Completed Tasks: Click "Delete completed tasks" to clear completed tasks from the list.
 
-## Learn More
+🔔 Notifications
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The app uses react-toastify for notifications:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Success messages for adding, updating, and deleting tasks.
+Error messages if there is an issue with API requests.
+Example Notification Code
+jsx
+Copy code
+import { toast } from 'react-toastify';
 
-### Code Splitting
+toast.success('Task added successfully!');
+toast.error('Error adding task');
+🎨 Styling
+The app is styled using a custom CSS file (style.css). You can modify the styles as needed to fit your design preferences.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+⚙️ Configuration
+Ensure that you have the following dependencies installed:
 
-### Analyzing the Bundle Size
+React
+react-toastify
+You can install missing dependencies with:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+bash
+Copy code
+npm install react-toastify
 
-### Making a Progressive Web App
+🐛 Known Issues
+API requests may fail if the JSONPlaceholder API is down or unreachable.
+Task IDs from the API are not unique, which may cause issues when editing or deleting tasks.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+🙌 Acknowledgments
+The app uses the JSONPlaceholder API for demo purposes.
+Thanks to React Toastify for the notification library.
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
